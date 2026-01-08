@@ -1,9 +1,20 @@
 [package]
-name = "libsm-js"
-description = "A WebAssembly Library of SM2, SM3 and SM4."
-version = "0.1.5"
+name = "libsm-js-miniprogram"
+description = "SM2/SM3/SM4 WebAssembly library with manually maintained JS glue code for WeChat Mini Program."
+version = "1.0.0"
 authors = ["梁峰宁 <liangfengning@foxmail.com>"]
 edition = "2018"
+
+[package.metadata.fork]
+forked_from = "https://github.com/Lifeni/libsm-js"
+maintainer = "konogurada"
+notes = """
+- Added compatibility for WeChat Mini Program
+- Manually maintained JS glue layer instead of auto-generated wasm-bindgen
+- Pinned Rust toolchain to 1.56.0 and wasm-bindgen to 0.2.63
+- Modified libsm sub-crate to integrate directly into root repository
+- Replaced original random number generation with JavaScript `Math.random()` for SM4 IV and key generation
+"""
 
 [workspace]
 members = ["libsm"]
@@ -23,6 +34,15 @@ console_error_panic_hook = { version = "0.1.6", optional = true }
 hex = "0.4.3"
 getrandom = { version = "0.2", features = ["js"] }
 num-bigint = "0.4.3"
+bumpalo = "=3.10.0"
+log = "=0.4.17"
+proc-macro2 = "=1.0.101"
+ppv-lite86 = "=0.2.17"
+quote = "=1.0.40"
+ryu = "=1.0.20"
+wasm-bindgen-shared = "=0.2.87"
+itoa = "=1.0.15"
+byteorder = "=1.4.3"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.13"
@@ -30,3 +50,10 @@ wasm-bindgen-test = "0.3.13"
 [profile.release]
 # Tell `rustc` to optimize for small code size.
 opt-level = "s"
+
+#[patch.crates-io]
+#quote = { git = "https://github.com/dtolnay/quote", tag = "1.0.40" }
+#bumpalo = { git = "https://github.com/fitzgen/bumpalo", tag = "3.10.0" }
+#log = { git = "https://github.com/rust-lang/log", tag = "0.4.17" }
+#proc-macro2 = { git = "https://github.com/dtolnay/proc-macro2", tag = "1.0.101" }
+#ppv-lite86 = { git = "https://github.com/RustCrypto/ppv-lite86", tag = "0.2.17" }

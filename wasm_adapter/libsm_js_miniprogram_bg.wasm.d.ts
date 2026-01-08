@@ -1,0 +1,38 @@
+/* tslint:disable */
+/* eslint-disable */
+export const memory: WebAssembly.Memory;
+export function __wbg_sm4_free(a: number): void;
+export function sm4_new(a: number, b: number): number;
+export function sm4_encrypt(a: number, b: number, c: number, d: number): void;
+export function sm4_decrypt(a: number, b: number, c: number, d: number): void;
+export function __wbg_sm2_free(a: number): void;
+export function sm2_new(): number;
+export function sm2_new_keypair(a: number): number;
+export function sm2_pk_from_sk(a: number, b: number, c: number, d: number): void;
+export function sm2_sign(a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number): void;
+export function sm2_verify(a: number, b: number, c: number, d: number, e: number, f: number, g: number): number;
+export function __wbg_sm2encrypt_free(a: number): void;
+export function sm2encrypt_new(a: number, b: number, c: number): number;
+export function sm2encrypt_encrypt(a: number, b: number, c: number, d: number): void;
+export function __wbg_sm2decrypt_free(a: number): void;
+export function sm2decrypt_new(a: number, b: number, c: number): number;
+export function sm2decrypt_decrypt(a: number, b: number, c: number, d: number): void;
+export function __wbg_sm2exchangea_free(a: number): void;
+export function sm2exchangea_new(a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number, j: number, k: number): number;
+export function sm2exchangea_exchange1(a: number, b: number): void;
+export function sm2exchangea_exchange3(a: number, b: number, c: number, d: number, e: number, f: number): void;
+export function sm2exchangea_get_key(a: number, b: number): void;
+export function __wbg_sm2exchangeb_free(a: number): void;
+export function sm2exchangeb_new(a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number, j: number, k: number): number;
+export function sm2exchangeb_exchange2(a: number, b: number, c: number): number;
+export function sm2exchangeb_exchange4(a: number, b: number, c: number, d: number, e: number): number;
+export function sm2exchangeb_get_key(a: number, b: number): void;
+export function start(): void;
+export function __wbg_sm3_free(a: number): void;
+export function sm3_new(a: number, b: number): number;
+export function sm3_get_hash(a: number, b: number): void;
+export function __wbindgen_malloc(a: number, b: number): number;
+export function __wbindgen_add_to_stack_pointer(a: number): number;
+export function __wbindgen_free(a: number, b: number, c: number): void;
+export function __wbindgen_realloc(a: number, b: number, c: number, d: number): number;
+export function __wbindgen_start(): void;

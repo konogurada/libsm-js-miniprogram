@@ -1,4 +1,8 @@
+MIT License
+
 Copyright (c) 2022 Lifeni
+Modified by: konoaquada (2026)
+Changes: Adapted for WeChat Mini Program, added custom TextEncoder/TextDecoder, removed remote WASM fetch
 
 Permission is hereby granted, free of charge, to any
 person obtaining a copy of this software and associated
